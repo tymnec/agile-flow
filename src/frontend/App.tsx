@@ -1,23 +1,11 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Button } from "@chakra-ui/react";
 
-const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        <header>
-          <h1>Welcome to My React App</h1>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-    </Router>
-  );
+function App() {
+    return (
+        <div>
+            <Button>hi</Button>
+        </div>
+    );
 }
 
 export default App;

@@ -1,12 +1,15 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
-		"moduleResolution": "node",
-		"lib": [
-			"es2015",
-			"DOM"
-		],
+			"target": "ES2020",
+			"useDefineForClassFields": true,
+			"lib": [
+				"ES2020",
+				"DOM",
+				"DOM.Iterable"
+			],
+			"module": "ESNext",
+			"skipLibCheck": true,
+		"esModuleInterop": true,
 
 		"rootDir": "src",
 		"outDir": "lib",
@@ -30,10 +33,23 @@
 		"downlevelIteration": true,
 		"declaration": true,
 
-		"pretty": true
+		"pretty": true,
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
 	},
 	"include": [
 		"typings/**/*",
 		"src/**/*"
+	],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
 	]
 }
